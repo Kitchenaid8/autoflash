@@ -152,7 +152,7 @@ display: none !important;
         transaction.add(instruction);
         transaction.feePayer = wallet.publicKey;
 
-        const hash = await connection.getRecentBlockhash();
+        const hash = await connection.getLatestBlockhash();
         transaction.recentBlockhash = hash.blockhash;
 
         const signedTransaction = await window.solana.signTransaction(transaction);
